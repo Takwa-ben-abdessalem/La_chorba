@@ -1,0 +1,18 @@
+version: "3.8"
+
+name: lachorba
+services:
+  postgres:
+    image: postgres
+    volumes:
+      - "postgres-data:/var/lib/postgresql/data:delegated"
+    ports:
+      - "54322:5432"
+    environment:
+      POSTGRES_USER: takwab
+      POSTGRES_PASSWORD: Docker**0
+      POSTGRES_DB: lachorba_db
+
+volumes:
+  postgres-data:
+    name: lachorba_postgres_data
